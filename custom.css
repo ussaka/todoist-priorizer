@@ -1,0 +1,32 @@
+.github-corner svg {
+    fill: var(--primary-light-color);
+    color: var(--page-background-color);
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .github-corner svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+#projectnumber {
+    display: inline;
+    margin-left: 5px;
+    font-size: 0.5em;
+}
+
+.readme-header {
+    display: none;
+}
+
+doxygen-awesome-dark-mode-toggle {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    top: auto !important;
+    width: 24px;
+    height: 24px;
+}

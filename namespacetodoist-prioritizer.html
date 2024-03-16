@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>todoist-prioritizer: todoist-prioritizer Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="prioritize.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">todoist-prioritizer
+   &#160;<span id="projectnumber">v1.0.0</span>
+   </div>
+   <div id="projectbrief">Automatically prioritize tasks in Todoist</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('namespacetodoist-prioritizer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">todoist-prioritizer Namespace Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a> (str filters)</td></tr>
+<tr class="memdesc:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get filtered tasks from the Todoist API.  <a href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">More...</a><br /></td></tr>
+<tr class="separator:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76e02aaf9f6b84bb2d9567bd6dec952"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#ad76e02aaf9f6b84bb2d9567bd6dec952">prioritize_tasks</a> (list tasks, int p, int max_size)</td></tr>
+<tr class="memdesc:ad76e02aaf9f6b84bb2d9567bd6dec952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prioritize the tasks.  <a href="namespacetodoist-prioritizer.html#ad76e02aaf9f6b84bb2d9567bd6dec952">More...</a><br /></td></tr>
+<tr class="separator:ad76e02aaf9f6b84bb2d9567bd6dec952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e694488d26087972f6907751b5e211"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a84e694488d26087972f6907751b5e211">sort_tasks_date</a> (list tasks)</td></tr>
+<tr class="memdesc:a84e694488d26087972f6907751b5e211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort the tasks by date, oldest to newest.  <a href="namespacetodoist-prioritizer.html#a84e694488d26087972f6907751b5e211">More...</a><br /></td></tr>
+<tr class="separator:a84e694488d26087972f6907751b5e211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6da13b696f737097e0146e47cc0d0985"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a6da13b696f737097e0146e47cc0d0985">api</a> = TodoistAPI(keyring.get_password(&quot;system&quot;, &quot;todoist-api-token&quot;))</td></tr>
+<tr class="separator:a6da13b696f737097e0146e47cc0d0985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc5ba7e22f5e4a6221c12a70503bef3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#adfc5ba7e22f5e4a6221c12a70503bef3">cmd</a> = <a class="el" href="classCommandLineParser_1_1CommandLineParser.html">CommandLineParser</a>()</td></tr>
+<tr class="separator:adfc5ba7e22f5e4a6221c12a70503bef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2256458892609d0533df5d72a7257ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#ad2256458892609d0533df5d72a7257ad">config</a> = configparser.ConfigParser()</td></tr>
+<tr class="separator:ad2256458892609d0533df5d72a7257ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5135668386ab64a05b794e9bb383f359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a5135668386ab64a05b794e9bb383f359">current_time</a> = datetime.datetime.now().time()</td></tr>
+<tr class="separator:a5135668386ab64a05b794e9bb383f359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c1fc11069ef834af861db1b23d9800"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800">p1_tasks</a> = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P1&quot;)</td></tr>
+<tr class="separator:a43c1fc11069ef834af861db1b23d9800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa06be8cf02610988ea8996383b2e18c"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#aaa06be8cf02610988ea8996383b2e18c">p2_tasks</a> = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P2&quot;)</td></tr>
+<tr class="separator:aaa06be8cf02610988ea8996383b2e18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda5cd4a3b2121e6e6802ea6ab515075"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#abda5cd4a3b2121e6e6802ea6ab515075">p3_tasks</a> = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P3&quot;)</td></tr>
+<tr class="separator:abda5cd4a3b2121e6e6802ea6ab515075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607e95528915a6fd5cfb2ed8b880ef22"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a607e95528915a6fd5cfb2ed8b880ef22">p4_tasks</a> = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P4&quot;)</td></tr>
+<tr class="separator:a607e95528915a6fd5cfb2ed8b880ef22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0c8ba8b77c2f7acfc69b028ef1e4a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a8b0c8ba8b77c2f7acfc69b028ef1e4a4">run_hour</a> = int(config.get(&quot;USER&quot;, &quot;run_hour&quot;))</td></tr>
+<tr class="separator:a8b0c8ba8b77c2f7acfc69b028ef1e4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71012d708a08fc615d2be1edf600b4a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a71012d708a08fc615d2be1edf600b4a1">run_minute</a> = int(config.get(&quot;USER&quot;, &quot;run_minute&quot;))</td></tr>
+<tr class="separator:a71012d708a08fc615d2be1edf600b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08521976ca1da7a19f47db33b49fb2be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a08521976ca1da7a19f47db33b49fb2be">run_time</a> = datetime.time(<a class="el" href="namespacetodoist-prioritizer.html#a8b0c8ba8b77c2f7acfc69b028ef1e4a4">run_hour</a>, <a class="el" href="namespacetodoist-prioritizer.html#a71012d708a08fc615d2be1edf600b4a1">run_minute</a>)</td></tr>
+<tr class="separator:a08521976ca1da7a19f47db33b49fb2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127e7226393cdfd46d45bdff10f5794a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a127e7226393cdfd46d45bdff10f5794a">tasks_size</a> = len(<a class="el" href="namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800">p1_tasks</a>)</td></tr>
+<tr class="separator:a127e7226393cdfd46d45bdff10f5794a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c55293e6565c3653a1a2dd9de10dbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a05c55293e6565c3653a1a2dd9de10dbe">tasks_target_size</a> = int(config.get(&quot;USER&quot;, &quot;<a class="el" href="namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800">p1_tasks</a>&quot;))</td></tr>
+<tr class="separator:a05c55293e6565c3653a1a2dd9de10dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aecc0f1a3dce6e5721b9fa5b22c0132a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc0f1a3dce6e5721b9fa5b22c0132a3">&#9670;&nbsp;</a></span>get_tasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> list todoist-prioritizer.get_tasks </td>
+          <td>(</td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>filters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get filtered tasks from the Todoist API. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filters</td><td>The filters to apply to the tasks</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: The list of tasks from the Todoist API </dd></dl>
+
+</div>
+</div>
+<a id="ad76e02aaf9f6b84bb2d9567bd6dec952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76e02aaf9f6b84bb2d9567bd6dec952">&#9670;&nbsp;</a></span>prioritize_tasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> list todoist-prioritizer.prioritize_tasks </td>
+          <td>(</td>
+          <td class="paramtype">list&#160;</td>
+          <td class="paramname"><em>tasks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prioritize the tasks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tasks</td><td>The list of tasks to prioritize </td></tr>
+    <tr><td class="paramname">p</td><td>The priority to set, 1-4, 4 being the highest priority </td></tr>
+    <tr><td class="paramname">max_size</td><td>The maximum number of tasks to prioritize</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: The list of tasks with the new priority </dd></dl>
+
+</div>
+</div>
+<a id="a84e694488d26087972f6907751b5e211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e694488d26087972f6907751b5e211">&#9670;&nbsp;</a></span>sort_tasks_date()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> list todoist-prioritizer.sort_tasks_date </td>
+          <td>(</td>
+          <td class="paramtype">list&#160;</td>
+          <td class="paramname"><em>tasks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sort the tasks by date, oldest to newest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tasks</td><td>The list of tasks to sort</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: The sorted list of tasks, oldest to newest </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6da13b696f737097e0146e47cc0d0985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da13b696f737097e0146e47cc0d0985">&#9670;&nbsp;</a></span>api</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">api = TodoistAPI(keyring.get_password(&quot;system&quot;, &quot;todoist-api-token&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfc5ba7e22f5e4a6221c12a70503bef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc5ba7e22f5e4a6221c12a70503bef3">&#9670;&nbsp;</a></span>cmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cmd = <a class="el" href="classCommandLineParser_1_1CommandLineParser.html">CommandLineParser</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2256458892609d0533df5d72a7257ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2256458892609d0533df5d72a7257ad">&#9670;&nbsp;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">config = configparser.ConfigParser()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5135668386ab64a05b794e9bb383f359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5135668386ab64a05b794e9bb383f359">&#9670;&nbsp;</a></span>current_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">current_time = datetime.datetime.now().time()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43c1fc11069ef834af861db1b23d9800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c1fc11069ef834af861db1b23d9800">&#9670;&nbsp;</a></span>p1_tasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list p1_tasks = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P1&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa06be8cf02610988ea8996383b2e18c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa06be8cf02610988ea8996383b2e18c">&#9670;&nbsp;</a></span>p2_tasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list p2_tasks = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P2&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abda5cd4a3b2121e6e6802ea6ab515075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda5cd4a3b2121e6e6802ea6ab515075">&#9670;&nbsp;</a></span>p3_tasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list p3_tasks = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P3&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a607e95528915a6fd5cfb2ed8b880ef22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607e95528915a6fd5cfb2ed8b880ef22">&#9670;&nbsp;</a></span>p4_tasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list p4_tasks = <a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a>(&quot;P4&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b0c8ba8b77c2f7acfc69b028ef1e4a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0c8ba8b77c2f7acfc69b028ef1e4a4">&#9670;&nbsp;</a></span>run_hour</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">run_hour = int(config.get(&quot;USER&quot;, &quot;run_hour&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71012d708a08fc615d2be1edf600b4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71012d708a08fc615d2be1edf600b4a1">&#9670;&nbsp;</a></span>run_minute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">run_minute = int(config.get(&quot;USER&quot;, &quot;run_minute&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08521976ca1da7a19f47db33b49fb2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08521976ca1da7a19f47db33b49fb2be">&#9670;&nbsp;</a></span>run_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">run_time = datetime.time(<a class="el" href="namespacetodoist-prioritizer.html#a8b0c8ba8b77c2f7acfc69b028ef1e4a4">run_hour</a>, <a class="el" href="namespacetodoist-prioritizer.html#a71012d708a08fc615d2be1edf600b4a1">run_minute</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a127e7226393cdfd46d45bdff10f5794a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127e7226393cdfd46d45bdff10f5794a">&#9670;&nbsp;</a></span>tasks_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tasks_size = len(<a class="el" href="namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800">p1_tasks</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05c55293e6565c3653a1a2dd9de10dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c55293e6565c3653a1a2dd9de10dbe">&#9670;&nbsp;</a></span>tasks_target_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tasks_target_size = int(config.get(&quot;USER&quot;, &quot;<a class="el" href="namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800">p1_tasks</a>&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacetodoist-prioritizer.html">todoist-prioritizer</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
