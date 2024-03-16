@@ -10,10 +10,10 @@ def make_wide(formatter, w: int = 120, h: int = 36):
     Return a wider HelpFormatter, if possible
 
     @param formatter: The formatter class to use
-    @param w: The width of the formatter
-    @param h: The height of the formatter
+    @param w The width of the formatter
+    @param h The height of the formatter
 
-    @return: A wider HelpFormatter, if possible
+    @return A wider HelpFormatter, if possible
     """
     try:
         # https://stackoverflow.com/a/5464440
@@ -76,6 +76,12 @@ class CommandLineParser:
             action="store_true",
             help="Reset configuration to default values",
         )
+        self.parser.add_argument(
+            "-d",
+            "--debug",
+            action="store_true",
+            help="Enable debug logging level",
+        )
 
     def __parse_args__(self):
         """
@@ -86,6 +92,12 @@ class CommandLineParser:
         config.read("config.ini")
 
         self.args = self.parser.parse_args()
+
+        logging.basicConfig(
+            level=logging.DEBUG if self.args.debug else logging.INFO,
+            format="%(asctime)s - %(levelname)s - %(message)s",
+            datefmt="%d.%m.%Y %H:%M:%S",
+        )
 
         if self.args.api is not None:
             logging.info("API token saved to keyring")
