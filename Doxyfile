@@ -61,13 +61,13 @@ PROJECT_BRIEF          = Automatically prioritize tasks in Todoist
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = docs/prioritize.png
+PROJECT_LOGO           = docs/prioritize.svg
 
 # With the PROJECT_ICON tag one can specify an icon that is included in the tabs
 # when the HTML document is shown. Doxygen will copy the logo to the output
 # directory.
 
-PROJECT_ICON           = docs/prioritize.png
+PROJECT_ICON           = docs/prioritize.svg
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
