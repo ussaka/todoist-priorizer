@@ -64,6 +64,7 @@ def prioritize_tasks(tasks: list, p: int, max_size: int) -> list:
 if __name__ == "__main__":
     # Create the command line parser
     cmd = CommandLineParser()
+    cmd.user_input()
 
     # Create the config parser
     config = configparser.ConfigParser()

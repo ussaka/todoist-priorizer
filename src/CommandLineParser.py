@@ -42,7 +42,7 @@ class CommandLineParser:
             formatter_class=make_wide(argparse.HelpFormatter, w=120, h=60)
         )
         self.__setup_args__()
-        self.__parse_args__()
+        self.parse_args()
 
     def __setup_args__(self):
         """
@@ -85,15 +85,18 @@ class CommandLineParser:
             help="Enable debug logging level",
         )
 
-    def __parse_args__(self):
+    def parse_args(self, input: bool = False):
         """
         Parses the command line arguments and stores them in self.args
+
+        @param input: If True use user inputted args, else use command line args
         """
         # Create the config parser
         config = configparser.ConfigParser()
         config.read(ini_path)
 
-        self.args = self.parser.parse_args()
+        if not input:
+            self.args = self.parser.parse_args()
 
         logging.basicConfig(
             level=logging.DEBUG if self.args.debug else logging.INFO,
@@ -134,3 +137,26 @@ class CommandLineParser:
                 config.write(configfile)
             logging.info("Reset")
             sys.exit(0)
+
+    def user_input(self):
+        """
+        Prompts the user for input if no command line arguments are provided
+        """
+        if self.args.api is None:
+            arg = input("Configure? (y/n): ")
+            if arg == "y":
+                self.args.reset = input("Reset? (y/n): ")
+                if self.args.reset == "y":
+                    self.args.reset = True
+                else:
+                    self.args.reset = False
+                    self.args.api = input("Enter API token: ")
+                    self.args.p1 = input("Enter P1 tasks: ")
+                    self.args.p2 = input("Enter P2 tasks: ")
+                    self.args.p3 = input("Enter P3 tasks: ")
+                    self.args.hh = input("Enter run hour: ")
+                    self.args.mm = input("Enter run minute: ")
+                    self.args.debug = input("Debug logging? (y/n): ")
+                    if self.args.debug == "y":
+                        self.args.debug = True
+                self.parse_args(True)
