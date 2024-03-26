@@ -6,6 +6,7 @@ import datetime
 import sys
 from time import sleep
 from CommandLineParser import CommandLineParser
+from CommandLineParser import ini_path
 
 
 def get_tasks(filters: str) -> list:
@@ -66,7 +67,7 @@ if __name__ == "__main__":
 
     # Create the config parser
     config = configparser.ConfigParser()
-    config.read("config.ini")
+    config.read(ini_path)
 
     # API token must be set
     try:
@@ -80,6 +81,7 @@ if __name__ == "__main__":
 
     run_hour = int(config.get("USER", "run_hour"))
     run_minute = int(config.get("USER", "run_minute"))
+    logging.info("todoist-prioritizer is running...")
     while True:
         current_time = datetime.datetime.now().time()
         run_time = datetime.time(run_hour, run_minute)

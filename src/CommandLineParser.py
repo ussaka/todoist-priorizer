@@ -4,6 +4,8 @@ import keyring
 import configparser
 import sys
 
+ini_path = "../config.ini"
+
 
 def make_wide(formatter, w: int = 120, h: int = 36):
     """!
@@ -89,7 +91,7 @@ class CommandLineParser:
         """
         # Create the config parser
         config = configparser.ConfigParser()
-        config.read("config.ini")
+        config.read(ini_path)
 
         self.args = self.parser.parse_args()
 
@@ -104,23 +106,23 @@ class CommandLineParser:
             keyring.set_password("system", "todoist-api-token", self.args.api)
         if self.args.p1 is not None:
             config.set("USER", "p1_tasks", str(self.args.p1))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
         if self.args.p2 is not None:
             config.set("USER", "p2_tasks", str(self.args.p2))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
         if self.args.p3 is not None:
             config.set("USER", "p3_tasks", str(self.args.p3))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
         if self.args.hh is not None:
             config.set("USER", "run_hour", str(self.args.hh))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
         if self.args.mm is not None:
             config.set("USER", "run_minute", str(self.args.mm))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
         if self.args.reset:
             config.set("USER", "p1_tasks", config.get("DEFAULT", "p1_tasks"))
@@ -128,7 +130,7 @@ class CommandLineParser:
             config.set("USER", "p3_tasks", config.get("DEFAULT", "p3_tasks"))
             config.set("USER", "run_hour", config.get("DEFAULT", "run_hour"))
             config.set("USER", "run_minute", config.get("DEFAULT", "run_minute"))
-            with open("config.ini", "w") as configfile:
+            with open(ini_path, "w") as configfile:
                 config.write(configfile)
             logging.info("Reset")
             sys.exit(0)
