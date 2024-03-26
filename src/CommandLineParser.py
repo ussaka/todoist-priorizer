@@ -3,8 +3,12 @@ import logging
 import keyring
 import configparser
 import sys
+import os
 
-ini_path = "../config.ini"
+# Get the directory of the script file
+script_dir = os.path.dirname(os.path.realpath(__file__))
+# Join the script directory with the relative path to the ini file
+ini_path = os.path.join(script_dir, "config.ini")
 
 
 def make_wide(formatter, w: int = 120, h: int = 36):
