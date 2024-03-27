@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5ftasks_36',['get_tasks',['../namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3',1,'todoist-prioritizer']]]
+  ['check_5ffor_5fupdates_40',['check_for_updates',['../namespacetodoist-prioritizer.html#a8ad303921a677ab5776a87c959f5d362',1,'todoist-prioritizer']]]
 ];

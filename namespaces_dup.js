@@ -2,6 +2,7 @@ var namespaces_dup =
 [
     [ "CommandLineParser", "namespaceCommandLineParser.html", "namespaceCommandLineParser" ],
     [ "todoist-prioritizer", "namespacetodoist-prioritizer.html", [
+      [ "check_for_updates", "namespacetodoist-prioritizer.html#a8ad303921a677ab5776a87c959f5d362", null ],
       [ "get_tasks", "namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3", null ],
       [ "prioritize_tasks", "namespacetodoist-prioritizer.html#ad76e02aaf9f6b84bb2d9567bd6dec952", null ],
       [ "sort_tasks_date", "namespacetodoist-prioritizer.html#a84e694488d26087972f6907751b5e211", null ],
@@ -9,6 +10,7 @@ var namespaces_dup =
       [ "cmd", "namespacetodoist-prioritizer.html#adfc5ba7e22f5e4a6221c12a70503bef3", null ],
       [ "config", "namespacetodoist-prioritizer.html#ad2256458892609d0533df5d72a7257ad", null ],
       [ "current_time", "namespacetodoist-prioritizer.html#a5135668386ab64a05b794e9bb383f359", null ],
+      [ "current_version", "namespacetodoist-prioritizer.html#a7051153a191753599a70fb92acee2745", null ],
       [ "p1_tasks", "namespacetodoist-prioritizer.html#a43c1fc11069ef834af861db1b23d9800", null ],
       [ "p2_tasks", "namespacetodoist-prioritizer.html#aaa06be8cf02610988ea8996383b2e18c", null ],
       [ "p3_tasks", "namespacetodoist-prioritizer.html#abda5cd4a3b2121e6e6802ea6ab515075", null ],

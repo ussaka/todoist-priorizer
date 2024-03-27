@@ -156,10 +156,12 @@ $(document).ready(function(){initNavTree('classCommandLineParser_1_1CommandLineP
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae64f0875afe3067b97ba370b354b9213"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandLineParser_1_1CommandLineParser.html#ae64f0875afe3067b97ba370b354b9213">__init__</a> (self)</td></tr>
 <tr class="separator:ae64f0875afe3067b97ba370b354b9213"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8ed27384d809ecd3b3643ab3863274a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandLineParser_1_1CommandLineParser.html#ae8ed27384d809ecd3b3643ab3863274a">__parse_args__</a> (self)</td></tr>
-<tr class="separator:ae8ed27384d809ecd3b3643ab3863274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ab48082db10e94e5513a8122741d842"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandLineParser_1_1CommandLineParser.html#a4ab48082db10e94e5513a8122741d842">__setup_args__</a> (self)</td></tr>
 <tr class="separator:a4ab48082db10e94e5513a8122741d842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401dc45c33fad7aed77417f228bd5c20"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandLineParser_1_1CommandLineParser.html#a401dc45c33fad7aed77417f228bd5c20">parse_args</a> (self, bool input=False)</td></tr>
+<tr class="separator:a401dc45c33fad7aed77417f228bd5c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9b7b179a511bab52b7b073c6e54c2b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandLineParser_1_1CommandLineParser.html#a6a9b7b179a511bab52b7b073c6e54c2b">user_input</a> (self)</td></tr>
+<tr class="separator:a6a9b7b179a511bab52b7b073c6e54c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -191,25 +193,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae8ed27384d809ecd3b3643ab3863274a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8ed27384d809ecd3b3643ab3863274a">&#9670;&nbsp;</a></span>__parse_args__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def __parse_args__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Parses the command line arguments and stores them in self.args
-</pre> 
-</div>
-</div>
 <a id="a4ab48082db10e94e5513a8122741d842"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ab48082db10e94e5513a8122741d842">&#9670;&nbsp;</a></span>__setup_args__()</h2>
 
@@ -226,6 +209,56 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Sets up the command line arguments for the parser
+</pre> 
+</div>
+</div>
+<a id="a401dc45c33fad7aed77417f228bd5c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401dc45c33fad7aed77417f228bd5c20">&#9670;&nbsp;</a></span>parse_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def parse_args </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &#160;</td>
+          <td class="paramname"><em>input</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Parses the command line arguments and stores them in self.args
+
+@param input: If True use user inputted args, else use command line args
+</pre> 
+</div>
+</div>
+<a id="a6a9b7b179a511bab52b7b073c6e54c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9b7b179a511bab52b7b073c6e54c2b">&#9670;&nbsp;</a></span>user_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def user_input </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Prompts the user for input if no command line arguments are provided
 </pre> 
 </div>
 </div>
