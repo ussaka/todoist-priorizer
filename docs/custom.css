@@ -1,5 +1,16 @@
+html {
+    --primary-color: #cc5646;
+    --primary-dark-color: #cc5646;
+}
+
+html.dark-mode {
+    color-scheme: dark;
+    --primary-color: #cc5646;
+    --primary-dark-color: #cc5646;
+}
+
 .github-corner svg {
-    fill: var(--primary-light-color);
+    fill: var(--primary-color);
     color: var(--page-background-color);
     width: 60px;
     height: 60px;
