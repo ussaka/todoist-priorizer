@@ -63,6 +63,19 @@ def sort_tasks_date(tasks: list) -> list:
     return tasks
 
 
+def convert_priority(priority):
+    """!
+    Convert API priority (4 is hightest) to UI priority (1 is highest)
+
+    @param priority The priority to convert
+
+    @return The converted priority
+    """
+
+    priority_map = {1: 4, 2: 3, 3: 2, 4: 1}
+    return priority_map.get(priority, priority)
+
+
 def prioritize_tasks(tasks: list, p: int, max_size: int) -> list:
     """!
     Prioritize the tasks
@@ -76,7 +89,9 @@ def prioritize_tasks(tasks: list, p: int, max_size: int) -> list:
     for i in range(0, max_size):
         try:
             is_success = api.update_task(task_id=tasks[i].id, priority=p)
-            logging.info(f"Priority changed:\n{is_success}\n")
+            logging.info(
+                f"Priority changed:\n- {is_success['content']}: P{convert_priority(tasks[i].priority)} -> P{convert_priority(p)}\n"
+            )
         except Exception as error:
             logging.error(error)
             sys.exit(1)
