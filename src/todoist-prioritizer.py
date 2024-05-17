@@ -9,7 +9,7 @@ from time import sleep
 from CommandLineParser import CommandLineParser
 from CommandLineParser import ini_path
 
-current_version = "v1.0.0"
+current_version = "v1.0.1"
 
 
 def check_for_updates():
@@ -122,7 +122,6 @@ if __name__ == "__main__":
     run_minute = int(config.get("USER", "run_minute"))
 
     logging.info(f"todoist-prioritizer {current_version}\n")
-    check_for_updates()
     logging.info("todoist-prioritizer is running...")
 
     while True:
@@ -160,6 +159,7 @@ if __name__ == "__main__":
                 logging.info(f"You have {tasks_size}/{tasks_target_size} P3 tasks")
                 prioritize_tasks(p4_tasks, 2, tasks_target_size - tasks_size)
 
+            check_for_updates()
             sleep(60)  # Run only once
         else:
             sleep(60)
