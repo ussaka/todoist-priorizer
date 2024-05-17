@@ -1,8 +1,14 @@
 var namespaces_dup =
 [
+    [ "How it works?", "index.html#autotoc_md1", null ],
+    [ "Python", "index.html#autotoc_md4", null ],
+    [ "PyInstaller", "index.html#autotoc_md5", null ],
+    [ "API token", "index.html#autotoc_md7", null ],
+    [ "Todoist API Python Client", "index.html#autotoc_md8", null ],
     [ "CommandLineParser", "namespaceCommandLineParser.html", "namespaceCommandLineParser" ],
     [ "todoist-prioritizer", "namespacetodoist-prioritizer.html", [
       [ "check_for_updates", "namespacetodoist-prioritizer.html#a8ad303921a677ab5776a87c959f5d362", null ],
+      [ "convert_priority", "namespacetodoist-prioritizer.html#a6325aad278d4bc635422e8133d5e32c1", null ],
       [ "get_tasks", "namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3", null ],
       [ "prioritize_tasks", "namespacetodoist-prioritizer.html#ad76e02aaf9f6b84bb2d9567bd6dec952", null ],
       [ "sort_tasks_date", "namespacetodoist-prioritizer.html#a84e694488d26087972f6907751b5e211", null ],

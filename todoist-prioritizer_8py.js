@@ -1,6 +1,7 @@
 var todoist_prioritizer_8py =
 [
     [ "check_for_updates", "todoist-prioritizer_8py.html#a8ad303921a677ab5776a87c959f5d362", null ],
+    [ "convert_priority", "todoist-prioritizer_8py.html#a6325aad278d4bc635422e8133d5e32c1", null ],
     [ "get_tasks", "todoist-prioritizer_8py.html#aecc0f1a3dce6e5721b9fa5b22c0132a3", null ],
     [ "prioritize_tasks", "todoist-prioritizer_8py.html#ad76e02aaf9f6b84bb2d9567bd6dec952", null ],
     [ "sort_tasks_date", "todoist-prioritizer_8py.html#a84e694488d26087972f6907751b5e211", null ],

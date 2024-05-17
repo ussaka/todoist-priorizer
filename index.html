@@ -149,23 +149,65 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> </p><div class="readme-header" align="center"> <img src="https://github.com/ussaka/todoist-prioritizer/blob/main/docs/priority.svg" alt="Description of the image" style="pointer-events: none;" width="150" height="150" class="inline"/> <h1>todoist-prioritizer</h1>
 </div><div class="readme-header" align="center"> <br  />
-</div><div class="readme-header" align="center"> <a href="https://github.com/ussaka/todoist-prioritizer/releases/latest"><img src="https://img.shields.io/badge/Release-1.0.0-blue?style=flat" alt="Release" class="inline"/></a> <a href="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f"><img src="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg" alt="wakatime" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql"><img src="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" style="pointer-events: none;" class="inline"/></a> </div><div class="readme-header" align="center"> <b> 📑 <a href="https://ussaka.github.io/todoist-prioritizer/">Documentation</a> </b> </div><div class="readme-header" align="center"> <br  />
+</div><div class="readme-header" align="center"> <a href="https://github.com/ussaka/todoist-prioritizer/releases/latest"><img src="https://img.shields.io/badge/Release-1.0.0-blue?style=flat" alt="Release" class="inline"/></a> <a href="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg"><img src="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg" alt="wakatime" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql"><img src="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" style="pointer-events: none;" class="inline"/></a> </div><div class="readme-header" align="center"> <b> 📑 <a href="https://ussaka.github.io/todoist-prioritizer/">Documentation</a> </b> </div><div class="readme-header" align="center"> <br  />
  <h3>Automatic <a href="https://todoist.com">Todoist</a> tasks prioritizer</h3>
 </div><div class="readme-header" align="center"> </div><h1><a class="anchor" id="autotoc_md0"></a>
+Description</h1>
+<p>The todoist-prioritizer is a Python script designed to manage Todoist tasks priority levels. Users can determine the number of tasks they want at each priority level, ranging from P1 (highest priority) to P3 (lowest priority). This tool is best suited for users with large amount of tasks without <code>due date</code>.</p>
+<h3><a class="anchor" id="autotoc_md1"></a>
+How it works?</h3>
+<ul>
+<li>Specify the number of tasks desired for each priority level (P1 to P3)</li>
+<li>When task count at specific priority level falls below the user's preferences, the script automatically promotes tasks from lower priority levels to higher ones, starting from the oldest task<ul>
+<li>E.g. If P1 level has 3/5 tasks then promote tasks from P2 to P1 starting from the oldest task in P2. After that, if P2 has less tasks than desired promote tasks from P3 to it and so on...</li>
+</ul>
+</li>
+<li>The script runs once a day at a time specified by the user</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Usage</h1>
-<p>Available commands </p><div class="fragment"><div class="line">python todoist-prioritizer.py -h</div>
-</div><!-- fragment --><p>Example usage </p><div class="fragment"><div class="line">python todoist-prioritizer.py -a 3x4mpl34p1k3y -h 00 -m 00 -d</div>
-</div><!-- fragment --><p>Reset to default settings </p><div class="fragment"><div class="line">python todoist-prioritizer.py -r</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md1"></a>
+<p>If the script is run without arguments, it will prompt for user input. This is true for just executing .exe too. Only Todoist api token needs to be set, the user can run other settings with default values. The api token is available at <a href="https://todoist.com/prefs/integrations">integrations/developer</a>.</p>
+<p>Available commands </p><div class="fragment"><div class="line">todoist-prioritizer --help</div>
+<div class="line">usage: todoist-prioritizer.py [-h] [-a API_TOKEN] [-p1 P1_SIZE] [-p2 P2_SIZE] [-p3 P3_SIZE] [-hh RUN_HOUR]</div>
+<div class="line">                              [-mm RUN_MINUTE] [-r] [-d]</div>
+<div class="line"> </div>
+<div class="line">options:</div>
+<div class="line">  -h, --help                     show this help message and exit</div>
+<div class="line">  -a API_TOKEN, --api API_TOKEN  Set api token</div>
+<div class="line">  -p1 P1_SIZE                    Maximum number of P1 tasks</div>
+<div class="line">  -p2 P2_SIZE                    Maximum number of P2 tasks</div>
+<div class="line">  -p3 P3_SIZE                    Maximum number of P3 tasks</div>
+<div class="line">  -hh RUN_HOUR                   The hour to run the script, 24 hour format</div>
+<div class="line">  -mm RUN_MINUTE                 The minute to run the script, 24 hour format</div>
+<div class="line">  -r, --reset                    Reset configuration to default values</div>
+<div class="line">  -d, --debug                    Enable debug logging level</div>
+</div><!-- fragment --><p>Example usage <br  />
+</p><ul>
+<li>Windows <div class="fragment"><div class="line">./todoist-prioritizer.exe -a 3x4mpl34p1k3y -h 00 -m 00 -d</div>
+</div><!-- fragment --></li>
+<li>Python <div class="fragment"><div class="line">python todoist-prioritizer.py -a 3x4mpl34p1k3y -h 00 -m 00 -d</div>
+</div><!-- fragment --></li>
+</ul>
+<p><a href="https://github.com/ussaka/todoist-prioritizer/blob/main/src/config.ini#L1">Default settings</a></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Installation</h1>
-<p>Pre-compiled .exe binaries are available in the [releases] for Windows users.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
-PyInstaller</h2>
-<p>Users can compile the script to an executable using PyInstaller </p>
-<h3><a class="anchor" id="autotoc_md3"></a>
-Windows</h3>
-<div class="fragment"><div class="line">pyinstaller src/todoist-prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.</div>
-</div><!-- fragment --> </div></div><!-- PageDoc -->
+<p>Pre-compiled .exe binaries are <a href="https://github.com/ussaka/todoist-prioritizer/releases/latest">released</a> for Windows users.</p>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Python</h3>
+<p>Install dependencies </p><div class="fragment"><div class="line">pip install -r requirements.txt</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md5"></a>
+PyInstaller</h3>
+<p>Users can compile the script by themselves to an executable using <a href="https://pyinstaller.org">PyInstaller</a>. </p><div class="fragment"><div class="line">pyinstaller src/todoist-prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+Security</h1>
+<p>This script relies on <code>todoist-api-python</code> and <code>keyring</code> libraries to manage Todoist API token. Precompiled binaries are available for Windows but you can compile them yourself or just run the script with Python to verify executed code.</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+API token</h3>
+<p>Todoist API token is stored using <a href="https://github.com/jaraco/keyring">keyring</a> library. The library chooses backend to use depending on the OS.</p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Todoist API Python Client</h3>
+<p>The script uses official <a href="https://github.com/Doist/todoist-api-python">todoist-api-python</a> client for connection to Todoist API. Communication between the script and Todoist API is assumed to be secure. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

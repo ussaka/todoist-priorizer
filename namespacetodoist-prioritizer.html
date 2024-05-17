@@ -155,6 +155,9 @@ $(document).ready(function(){initNavTree('namespacetodoist-prioritizer.html','')
 Functions</h2></td></tr>
 <tr class="memitem:a8ad303921a677ab5776a87c959f5d362"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a8ad303921a677ab5776a87c959f5d362">check_for_updates</a> ()</td></tr>
 <tr class="separator:a8ad303921a677ab5776a87c959f5d362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6325aad278d4bc635422e8133d5e32c1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#a6325aad278d4bc635422e8133d5e32c1">convert_priority</a> (priority)</td></tr>
+<tr class="memdesc:a6325aad278d4bc635422e8133d5e32c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert API priority (4 is hightest) to UI priority (1 is highest)  <a href="namespacetodoist-prioritizer.html#a6325aad278d4bc635422e8133d5e32c1">More...</a><br /></td></tr>
+<tr class="separator:a6325aad278d4bc635422e8133d5e32c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">get_tasks</a> (str filters)</td></tr>
 <tr class="memdesc:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get filtered tasks from the Todoist API.  <a href="namespacetodoist-prioritizer.html#aecc0f1a3dce6e5721b9fa5b22c0132a3">More...</a><br /></td></tr>
 <tr class="separator:aecc0f1a3dce6e5721b9fa5b22c0132a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,6 +216,33 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <pre class="fragment">Check for updates in the repository releases
 </pre> 
+</div>
+</div>
+<a id="a6325aad278d4bc635422e8133d5e32c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6325aad278d4bc635422e8133d5e32c1">&#9670;&nbsp;</a></span>convert_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def todoist-prioritizer.convert_priority </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert API priority (4 is hightest) to UI priority (1 is highest) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>The priority to convert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted priority </dd></dl>
+
 </div>
 </div>
 <a id="aecc0f1a3dce6e5721b9fa5b22c0132a3"></a>

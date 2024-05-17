@@ -25,12 +25,10 @@
 var NAVTREE =
 [
   [ "todoist-prioritizer", "index.html", [
-    [ "Usage", "index.html#autotoc_md0", null ],
-    [ "Installation", "index.html#autotoc_md1", [
-      [ "PyInstaller", "index.html#autotoc_md2", [
-        [ "Windows", "index.html#autotoc_md3", null ]
-      ] ]
-    ] ],
+    [ "Description", "index.html#autotoc_md0", null ],
+    [ "Usage", "index.html#autotoc_md2", null ],
+    [ "Installation", "index.html#autotoc_md3", null ],
+    [ "Security", "index.html#autotoc_md6", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
