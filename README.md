@@ -23,7 +23,7 @@ The todoist-prioritizer is a Python script designed to manage Todoist tasks prio
 - The script runs once a day at a time specified by the user
 
 # Usage
-If the script is run without arguments, it will prompt for user input. Only Todoist api token needs to be set, the user can run other settings with default values. The api token is available at [integrations/developer](https://todoist.com/prefs/integrations).
+If the script is run without arguments, it will prompt for user input. This is true for just executing .exe too. Only Todoist api token needs to be set, the user can run other settings with default values. The api token is available at [integrations/developer](https://todoist.com/prefs/integrations).
 
 Available commands
 ```bash
@@ -69,3 +69,12 @@ Users can compile the script by themselves to an executable using [PyInstaller](
 ```bash
 pyinstaller src/todoist-prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.
 ```
+
+# Security
+This script relies on `todoist-api-python` and `keyring` libraries to manage Todoist API token. Precompiled binaries are available for Windows but you can compile them yourself or just run the script with Python to verify executed code.
+
+### API token
+Todoist API token is stored using [keyring](https://github.com/jaraco/keyring) library. The library chooses backend to use depending on the OS.
+
+### Todoist API Python Client
+The script uses official [todoist-api-python](https://github.com/Doist/todoist-api-python) client for connection to Todoist API. Communication between the script and Todoist API is assumed to be secure.
