@@ -10,11 +10,14 @@ from CommandLineParser import CommandLineParser
 from CommandLineParser import ini_path
 
 current_version = "v1.0.1"
+api_token = None
 
 
 def check_for_updates():
     """
     Check for updates in the repository releases
+
+    @return Response
     """
     repo_url = "https://api.github.com/repos/ussaka/todoist-prioritizer/releases"
     response = requests.get(repo_url)
@@ -30,6 +33,7 @@ def check_for_updates():
         logging.error(
             "Update checker failed, failed to fetch releases from the repository"
         )
+    return response
 
 
 def get_tasks(filters: str) -> list:
@@ -42,7 +46,7 @@ def get_tasks(filters: str) -> list:
     """
     tasks = []
     try:
-        tasks = api.get_tasks(filter=filters)
+        tasks = api_token.get_tasks(filter=filters)
     except Exception as error:
         logging.error(error)
         sys.exit(1)
@@ -88,7 +92,7 @@ def prioritize_tasks(tasks: list, p: int, max_size: int) -> list:
     """
     for i in range(0, max_size):
         try:
-            is_success = api.update_task(task_id=tasks[i].id, priority=p)
+            is_success = api_token.update_task(task_id=tasks[i].id, priority=p)
             logging.info(
                 f"Priority changed:\n- {is_success['content']}: P{convert_priority(tasks[i].priority)} -> P{convert_priority(p)}\n"
             )
@@ -116,7 +120,7 @@ if __name__ == "__main__":
         logging.error(error)
 
     # Create the TodoistAPI object
-    api = TodoistAPI(keyring.get_password("system", "todoist-api-token"))
+    api_token = TodoistAPI(keyring.get_password("system", "todoist-api-token"))
 
     run_hour = int(config.get("USER", "run_hour"))
     run_minute = int(config.get("USER", "run_minute"))
