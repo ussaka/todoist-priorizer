@@ -1,3 +1,3 @@
 ﻿keyring==24.3.1
 requests==2.31.0
-todoist-api-python==2.1.3
+todoist-api-python==2.1.4
