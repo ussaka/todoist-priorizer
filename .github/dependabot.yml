@@ -11,5 +11,5 @@ updates:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
     ignore:
-      - dependency-name: "docs/doxygen-awesome-css"
+      - dependency-name: "doxygen-awesome-css"
         versions: ["*"] # Ignore all versions of a dependency within a submodule
