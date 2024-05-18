@@ -61,7 +61,7 @@ Pre-compiled .exe binaries are [released](https://github.com/ussaka/todoist-prio
 ### Python
 Install dependencies
 ```bash
-pip install -r src/requirements.txt
+pip install -r requirements/requirements.txt
 ```
 
 ### PyInstaller

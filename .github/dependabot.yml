@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/src" # Location of package manifests
+    directory: "/requirements" # Location of package manifests
     schedule:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
