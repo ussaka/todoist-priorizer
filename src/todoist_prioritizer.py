@@ -9,7 +9,7 @@ from time import sleep
 from CommandLineParser import CommandLineParser
 from CommandLineParser import ini_path
 
-current_version = "v1.0.1"
+current_version = "v1.0.2"
 api_token = None
 
 

@@ -5,6 +5,17 @@ on:
     types: [published]
 
 jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Delete deployments
+        uses: strumwolf/delete-deployment-environment@v3.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: github-pages
+          onlyRemoveDeployments: true
+          
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -13,8 +24,36 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set version
-        run: echo "PROJECT_NUMBER = `git describe --tags`" >> Doxyfile
+      - name: Check version numbers
+        id: check_version
+        run: |
+          # Get the latest git tag version
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "Git Tag Version: $VERSION"
+    
+          # Extract version from Doxyfile
+          DOXYFILE_VERSION=$(grep -oP '(?<=PROJECT_NUMBER = )[^ ]*' Doxyfile)
+          echo "Doxyfile Version: $DOXYFILE_VERSION"
+
+          # Check if the git tag version matches the version in the Doxyfile
+          if [ "$VERSION" != "$DOXYFILE_VERSION" ]; then
+            echo "Error: Git tag version $VERSION does not match Doxyfile version $DOXYFILE_VERSION"
+            exit 1
+          fi
+
+          echo "Git tag version $VERSION matches Doxyfile version $DOXYFILE_VERSION"
+    
+          # Extract version from Python file (example.py)
+          PYTHON_VERSION=$(grep -oP '(?<=current_version = ")[^"]*' src/todoist_prioritizer.py)
+          echo "Python File Version: $PYTHON_VERSION"
+    
+          # Check if the git tag version matches the version in the Python file
+          if [ "$VERSION" != "$PYTHON_VERSION" ]; then
+            echo "Error: Git tag version $VERSION does not match Python file version $PYTHON_VERSION"
+            exit 1
+          fi
+    
+          echo "Git tag version $VERSION matches Python file version $PYTHON_VERSION"
 
       - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
         with:

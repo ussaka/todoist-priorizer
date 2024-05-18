@@ -4,7 +4,7 @@
 
   [![wakatime](https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg)](https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg)
   [![Unit tests](https://github.com/ussaka/todoist-prioritizer/actions/workflows/unittests.yml/badge.svg)](https://github.com/ussaka/todoist-prioritizer/actions/workflows/unittests.yml)
-  [![CodeQL](https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql)
+  [![CodeQL](https://github.com/ussaka/todoist-prioritizer/actions/workflows/codeql.yml/badge.svg)](https://github.com/ussaka/todoist-prioritizer/actions/workflows/codeql.yml)
   <p>
       <b>
           📑 <a href="https://ussaka.github.io/todoist-prioritizer/">Documentation</a>
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ### PyInstaller
 Users can compile the script by themselves to an executable using [PyInstaller](https://pyinstaller.org).
 ```bash
-pyinstaller src/todoist-prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.
+pyinstaller src/todoist_prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.
 ```
 
 # Security
