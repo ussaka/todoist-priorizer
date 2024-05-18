@@ -10,3 +10,12 @@ updates:
     schedule:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
+    allow:
+      - dependency-name: "todoist-api-python"
+      - dependency-name: "keyring"
+    ignore:
+      - dependency-name: "docs/doxygen-awesome-css"
+      - dependency-name: "doxygen-awesome-css"
+      - dependency-name: "https://github.com/jothepro/doxygen-awesome-css.git"
+
+
