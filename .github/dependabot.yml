@@ -6,10 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    directory: "/src" # Location of package manifests
     schedule:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
-    ignore:
-      - dependency-name: "doxygen-awesome-css"
-        versions: ["*"] # Ignore all versions of a dependency within a submodule
