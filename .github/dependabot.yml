@@ -10,5 +10,5 @@ updates:
     schedule:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
-  ignore:
-    - dependency-name: "doxygen-awesome-css"
+    ignore:
+      - dependency-name: "doxygen-awesome-css"
