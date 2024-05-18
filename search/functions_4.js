@@ -1,5 +1,5 @@
 var searchData=
 [
   ['parse_5fargs_45',['parse_args',['../classCommandLineParser_1_1CommandLineParser.html#a401dc45c33fad7aed77417f228bd5c20',1,'CommandLineParser::CommandLineParser']]],
-  ['prioritize_5ftasks_46',['prioritize_tasks',['../namespacetodoist-prioritizer.html#ad76e02aaf9f6b84bb2d9567bd6dec952',1,'todoist-prioritizer']]]
+  ['prioritize_5ftasks_46',['prioritize_tasks',['../namespacetodoist__prioritizer.html#a8441aaec4df6b8a52428f4722826117f',1,'todoist_prioritizer']]]
 ];

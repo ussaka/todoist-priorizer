@@ -87,7 +87,7 @@
                         <td id="projectalign" style="padding-left: 0.5em;">
                             <div id="projectname">todoist-prioritizer
                                 &#160;<span
-                                    id="projectnumber">v1.0.0</span>
+                                    id="projectnumber">v1.0.2</span>
                             </div>
                             <div id="projectbrief">Automatically prioritize tasks in Todoist</div>
                         </td>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> </p><div class="readme-header" align="center"> <img src="https://github.com/ussaka/todoist-prioritizer/blob/main/docs/priority.svg" alt="Description of the image" style="pointer-events: none;" width="150" height="150" class="inline"/> <h1>todoist-prioritizer</h1>
 </div><div class="readme-header" align="center"> <br  />
-</div><div class="readme-header" align="center"> <a href="https://github.com/ussaka/todoist-prioritizer/releases/latest"><img src="https://img.shields.io/badge/Release-1.0.0-blue?style=flat" alt="Release" class="inline"/></a> <a href="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg"><img src="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg" alt="wakatime" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql"><img src="https://github.com/ussaka/todoist-prioritizer/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" style="pointer-events: none;" class="inline"/></a> </div><div class="readme-header" align="center"> <b> 📑 <a href="https://ussaka.github.io/todoist-prioritizer/">Documentation</a> </b> </div><div class="readme-header" align="center"> <br  />
+</div><div class="readme-header" align="center"> <a href="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg"><img src="https://wakatime.com/badge/user/41c5948e-4207-46a3-bcb4-2f355d15e4ac/project/018e4894-c1f1-49df-b86c-1d01599a769f.svg" alt="wakatime" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/ussaka/todoist-prioritizer/actions/workflows/unittests.yml"><img src="https://github.com/ussaka/todoist-prioritizer/actions/workflows/unittests.yml/badge.svg" alt="Unit tests" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/ussaka/todoist-prioritizer/actions/workflows/codeql.yml"><img src="https://github.com/ussaka/todoist-prioritizer/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" style="pointer-events: none;" class="inline"/></a> </div><div class="readme-header" align="center"> <b> 📑 <a href="https://ussaka.github.io/todoist-prioritizer/">Documentation</a> </b> </div><div class="readme-header" align="center"> <br  />
  <h3>Automatic <a href="https://todoist.com">Todoist</a> tasks prioritizer</h3>
 </div><div class="readme-header" align="center"> </div><h1><a class="anchor" id="autotoc_md0"></a>
 Description</h1>
@@ -197,7 +197,7 @@ Python</h3>
 <p>Install dependencies </p><div class="fragment"><div class="line">pip install -r requirements.txt</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md5"></a>
 PyInstaller</h3>
-<p>Users can compile the script by themselves to an executable using <a href="https://pyinstaller.org">PyInstaller</a>. </p><div class="fragment"><div class="line">pyinstaller src/todoist-prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.</div>
+<p>Users can compile the script by themselves to an executable using <a href="https://pyinstaller.org">PyInstaller</a>. </p><div class="fragment"><div class="line">pyinstaller src/todoist_prioritizer.py --icon=docs/priority.ico -c --onefile --add-data src/config.ini:.</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
 Security</h1>
 <p>This script relies on <code>todoist-api-python</code> and <code>keyring</code> libraries to manage Todoist API token. Precompiled binaries are available for Windows but you can compile them yourself or just run the script with Python to verify executed code.</p>
