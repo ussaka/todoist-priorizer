@@ -6,10 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/requirements" # Location of package manifests
+    directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
     target-branch: "main" # The branch into which the updates should be merged
-    allow:
-      - dependency-name: "todoist-api-python"
-      - dependency-name: "keyring"
