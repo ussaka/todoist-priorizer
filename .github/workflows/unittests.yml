@@ -1,5 +1,9 @@
 name: Unit tests
 
+permissions:
+  checks: write
+  pull-requests: write
+
 on: [push]
 
 jobs:
