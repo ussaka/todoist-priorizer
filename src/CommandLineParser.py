@@ -77,6 +77,18 @@ class CommandLineParser:
             help="The minute to run the script, 24 hour format",
         )
         self.parser.add_argument(
+            "-nd",
+            type=int,
+            metavar="TASKS_SIZE",
+            help="Number of tasks with no duration to prioritize for today",
+        )
+        self.parser.add_argument(
+            "-du",
+            type=int,
+            metavar="DURATION_MIN",
+            help="Maximum tasks duration in minutes to prioritize for today",
+        )
+        self.parser.add_argument(
             "-r",
             "--reset",
             action="store_true",
@@ -131,12 +143,24 @@ class CommandLineParser:
             config.set("USER", "run_minute", str(self.args.mm))
             with open(ini_path, "w") as configfile:
                 config.write(configfile)
+        if self.args.nd is not None:
+            config.set("USER", "number_of_tasks", str(self.args.nd))
+            with open(ini_path, "w") as configfile:
+                config.write(configfile)
+        if self.args.du is not None:
+            config.set("USER", "task_duration", str(self.args.du))
+            with open(ini_path, "w") as configfile:
+                config.write(configfile)
         if self.args.reset:
             config.set("USER", "p1_tasks", config.get("DEFAULT", "p1_tasks"))
             config.set("USER", "p2_tasks", config.get("DEFAULT", "p2_tasks"))
             config.set("USER", "p3_tasks", config.get("DEFAULT", "p3_tasks"))
             config.set("USER", "run_hour", config.get("DEFAULT", "run_hour"))
             config.set("USER", "run_minute", config.get("DEFAULT", "run_minute"))
+            config.set(
+                "USER", "number_of_tasks", config.get("DEFAULT", "number_of_tasks")
+            )
+            config.set("USER", "task_duration", config.get("DEFAULT", "task_duration"))
             with open(ini_path, "w") as configfile:
                 config.write(configfile)
             logging.info("Reset")
@@ -160,6 +184,12 @@ class CommandLineParser:
                     self.args.p3 = input("Enter P3 tasks: ")
                     self.args.hh = input("Enter run hour: ")
                     self.args.mm = input("Enter run minute: ")
+                    self.args.nd = input(
+                        "Enter how many tasks without duration to prioritize: "
+                    )
+                    self.args.du = input(
+                        "Enter maximum duration for tasks to prioritize for today view: "
+                    )
                     self.args.debug = input("Debug logging? (y/n): ")
                     if self.args.debug == "y":
                         self.args.debug = True

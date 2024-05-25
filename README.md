@@ -14,12 +14,14 @@
 </div>
 
 # Description
-The todoist-prioritizer is a Python script designed to manage Todoist tasks priority levels. Users can determine the number of tasks they want at each priority level, ranging from P1 (highest priority) to P3 (lowest priority). This tool is best suited for users with large amount of tasks without `due date`.
+The todoist-prioritizer is a Python script designed to manage Todoist tasks priority levels and fill task for today view. Users can determine the number of tasks they want at each priority level, ranging from P1 (highest priority) to P3 (lowest priority). And number of tasks to fill for today view.
 
-### How it works?
+### Features
 - Specify the number of tasks desired for each priority level (P1 to P3)
 - When task count at specific priority level falls below the user's preferences, the script automatically promotes tasks from lower priority levels to higher ones, starting from the oldest task
-  - E.g. If P1 level has 3/5 tasks then promote tasks from P2 to P1 starting from the oldest task in P2. After that, if P2 has less tasks than desired promote tasks from P3 to it and so on... 
+  - E.g. If P1 level has 3/5 tasks then promote tasks from P2 to P1 starting from the oldest task in P2. After that, if P2 has less tasks than desired promote tasks from P3 to it and so on...
+- Specify number of tasks with no duration and max. duration for tasks to fill for today view
+- The script will fill tasks for today view until user set requirements are met
 - The script runs once a day at a time specified by the user
 
 # Usage
@@ -28,8 +30,8 @@ If the script is run without arguments, it will prompt for user input. This is t
 Available commands
 ```bash
 todoist-prioritizer --help
-usage: todoist-prioritizer.py [-h] [-a API_TOKEN] [-p1 P1_SIZE] [-p2 P2_SIZE] [-p3 P3_SIZE] [-hh RUN_HOUR]
-                              [-mm RUN_MINUTE] [-r] [-d]
+usage: todoist_prioritizer.py [-h] [-a API_TOKEN] [-p1 P1_SIZE] [-p2 P2_SIZE] [-p3 P3_SIZE] [-hh RUN_HOUR]
+                              [-mm RUN_MINUTE] [-nd TASKS_SIZE] [-du DURATION_MIN] [-r] [-d]
 
 options:
   -h, --help                     show this help message and exit
@@ -39,6 +41,8 @@ options:
   -p3 P3_SIZE                    Maximum number of P3 tasks
   -hh RUN_HOUR                   The hour to run the script, 24 hour format
   -mm RUN_MINUTE                 The minute to run the script, 24 hour format
+  -nd TASKS_SIZE                 Number of tasks with no duration to prioritize for today
+  -du DURATION_MIN               Maximum tasks duration in minutes to prioritize for today
   -r, --reset                    Reset configuration to default values
   -d, --debug                    Enable debug logging level
 ```
