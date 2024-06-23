@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fwide_44',['make_wide',['../namespaceCommandLineParser.html#a33b89404a6cc11373fecb9d3db9db88b',1,'CommandLineParser']]]
+  ['get_5ftasks_50',['get_tasks',['../namespacetodoist__prioritizer.html#a835a48b62c1d88688012cc52e793c284',1,'todoist_prioritizer']]]
 ];

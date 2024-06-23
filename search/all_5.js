@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fwide_14',['make_wide',['../namespaceCommandLineParser.html#a33b89404a6cc11373fecb9d3db9db88b',1,'CommandLineParser']]]
+  ['ini_5fpath_14',['ini_path',['../namespaceCommandLineParser.html#a5f1601966cfc036f4f856d97e7ce5fc5',1,'CommandLineParser']]]
 ];

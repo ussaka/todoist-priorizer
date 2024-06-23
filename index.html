@@ -87,7 +87,7 @@
                         <td id="projectalign" style="padding-left: 0.5em;">
                             <div id="projectname">todoist-prioritizer
                                 &#160;<span
-                                    id="projectnumber">v1.0.2</span>
+                                    id="projectnumber">v1.1.0</span>
                             </div>
                             <div id="projectbrief">Automatically prioritize tasks in Todoist</div>
                         </td>
@@ -153,23 +153,25 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
  <h3>Automatic <a href="https://todoist.com">Todoist</a> tasks prioritizer</h3>
 </div><div class="readme-header" align="center"> </div><h1><a class="anchor" id="autotoc_md0"></a>
 Description</h1>
-<p>The todoist-prioritizer is a Python script designed to manage Todoist tasks priority levels. Users can determine the number of tasks they want at each priority level, ranging from P1 (highest priority) to P3 (lowest priority). This tool is best suited for users with large amount of tasks without <code>due date</code>.</p>
+<p>The todoist-prioritizer is a Python script designed to manage Todoist tasks priority levels and fill task for today view. Users can determine the number of tasks they want at each priority level, ranging from P1 (highest priority) to P3 (lowest priority). And number of tasks to fill for today view.</p>
 <h3><a class="anchor" id="autotoc_md1"></a>
-How it works?</h3>
+Features</h3>
 <ul>
 <li>Specify the number of tasks desired for each priority level (P1 to P3)</li>
 <li>When task count at specific priority level falls below the user's preferences, the script automatically promotes tasks from lower priority levels to higher ones, starting from the oldest task<ul>
 <li>E.g. If P1 level has 3/5 tasks then promote tasks from P2 to P1 starting from the oldest task in P2. After that, if P2 has less tasks than desired promote tasks from P3 to it and so on...</li>
 </ul>
 </li>
+<li>Specify number of tasks with no duration and max. duration for tasks to fill for today view</li>
+<li>The script will fill tasks for today view until user set requirements are met</li>
 <li>The script runs once a day at a time specified by the user</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Usage</h1>
 <p>If the script is run without arguments, it will prompt for user input. This is true for just executing .exe too. Only Todoist api token needs to be set, the user can run other settings with default values. The api token is available at <a href="https://todoist.com/prefs/integrations">integrations/developer</a>.</p>
 <p>Available commands </p><div class="fragment"><div class="line">todoist-prioritizer --help</div>
-<div class="line">usage: todoist-prioritizer.py [-h] [-a API_TOKEN] [-p1 P1_SIZE] [-p2 P2_SIZE] [-p3 P3_SIZE] [-hh RUN_HOUR]</div>
-<div class="line">                              [-mm RUN_MINUTE] [-r] [-d]</div>
+<div class="line">usage: todoist_prioritizer.py [-h] [-a API_TOKEN] [-p1 P1_SIZE] [-p2 P2_SIZE] [-p3 P3_SIZE] [-hh RUN_HOUR]</div>
+<div class="line">                              [-mm RUN_MINUTE] [-nd TASKS_SIZE] [-du DURATION_MIN] [-r] [-d]</div>
 <div class="line"> </div>
 <div class="line">options:</div>
 <div class="line">  -h, --help                     show this help message and exit</div>
@@ -179,6 +181,8 @@ Usage</h1>
 <div class="line">  -p3 P3_SIZE                    Maximum number of P3 tasks</div>
 <div class="line">  -hh RUN_HOUR                   The hour to run the script, 24 hour format</div>
 <div class="line">  -mm RUN_MINUTE                 The minute to run the script, 24 hour format</div>
+<div class="line">  -nd TASKS_SIZE                 Number of tasks with no duration to prioritize for today</div>
+<div class="line">  -du DURATION_MIN               Maximum tasks duration in minutes to prioritize for today</div>
 <div class="line">  -r, --reset                    Reset configuration to default values</div>
 <div class="line">  -d, --debug                    Enable debug logging level</div>
 </div><!-- fragment --><p>Example usage <br  />

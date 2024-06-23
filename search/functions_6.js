@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_5finput_48',['user_input',['../classCommandLineParser_1_1CommandLineParser.html#a6a9b7b179a511bab52b7b073c6e54c2b',1,'CommandLineParser::CommandLineParser']]]
+  ['sort_5ftasks_5fdate_54',['sort_tasks_date',['../namespacetodoist__prioritizer.html#abf99998422c451ebbd16460b5e81b22c',1,'todoist_prioritizer']]]
 ];

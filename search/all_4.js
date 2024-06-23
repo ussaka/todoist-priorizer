@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ini_5fpath_13',['ini_path',['../namespaceCommandLineParser.html#a5f1601966cfc036f4f856d97e7ce5fc5',1,'CommandLineParser']]]
+  ['get_5ftasks_13',['get_tasks',['../namespacetodoist__prioritizer.html#a835a48b62c1d88688012cc52e793c284',1,'todoist_prioritizer']]]
 ];
