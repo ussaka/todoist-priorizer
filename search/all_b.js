@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['user_5finput_38',['user_input',['../classCommandLineParser_1_1CommandLineParser.html#a6a9b7b179a511bab52b7b073c6e54c2b',1,'CommandLineParser::CommandLineParser']]]
+  ['todoist_2dprioritizer_0',['todoist-prioritizer',['../index.html',1,'']]],
+  ['todoist_5fprioritizer_1',['todoist_prioritizer',['../namespacetodoist__prioritizer.html',1,'']]],
+  ['todoist_5fprioritizer_2epy_2',['todoist_prioritizer.py',['../todoist__prioritizer_8py.html',1,'']]],
+  ['try_3',['try',['../namespacetodoist__prioritizer.html#abe4cc9788f52e49485473dc699537388',1,'todoist_prioritizer']]]
 ];

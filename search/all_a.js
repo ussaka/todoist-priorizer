@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['todoist_5fprioritizer_36',['todoist_prioritizer',['../namespacetodoist__prioritizer.html',1,'']]],
-  ['todoist_5fprioritizer_2epy_37',['todoist_prioritizer.py',['../todoist__prioritizer_8py.html',1,'']]]
+  ['script_5fdir_0',['script_dir',['../namespaceCommandLineParser.html#aa160e684e6370a983512bebec969a7d5',1,'CommandLineParser']]],
+  ['sort_5ftasks_5fdate_1',['sort_tasks_date',['../namespacetodoist__prioritizer.html#a57217c0fd663cb9c4c23d54f4e88f522',1,'todoist_prioritizer']]]
 ];
