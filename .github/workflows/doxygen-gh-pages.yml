@@ -55,6 +55,6 @@ jobs:
     
           echo "Git tag version $VERSION matches Python file version $PYTHON_VERSION"
 
-      - uses: DenverCoder1/doxygen-github-pages-action@v1.3.1
+      - uses: DenverCoder1/doxygen-github-pages-action@v2.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
