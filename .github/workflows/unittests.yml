@@ -35,6 +35,11 @@ jobs:
           pip install pytest pytest-cov
           pytest ./test/todoist_prioritizer_test.py --doctest-modules --junitxml=junit/test-results.xml
 
+      - name: Upload results to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
