@@ -35,6 +35,9 @@ jobs:
           pip install pytest pytest-cov
           pytest ./test/todoist_prioritizer_test.py --doctest-modules --junitxml=junit/test-results.xml
 
+      - name: Run tests
+        run: pytest --cov
+
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4
         with:
